@@ -1,0 +1,11 @@
+on: push
+jobs:
+  build-ginkgo:
+    runs-on: [windows-latest]
+    steps:
+    - name: vcpkg download
+      run: git clone https://github.com/upsj/vcpkg -b ginkgo-1.5.0
+    - name: vcpkg install
+      run: vcpkg\bootstrap-vcpkg.bat
+    - name: vcpkg build
+      run: vcpkg\vcpkg install ginkgo
