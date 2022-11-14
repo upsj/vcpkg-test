@@ -14,5 +14,5 @@ jobs:
       uses: actions/upload-artifact@v3.1.1
       with:
         name: logs
-        path: $env:GITHUB_WORKSPACE\buildtrees\ginkgo\*.log
+        path: D:\a\vcpkg-test\vcpkg-test\vcpkg\buildtrees\ginkgo\install-x86-windows-dbg-out.log
 
