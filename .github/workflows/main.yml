@@ -8,11 +8,11 @@ jobs:
     - name: vcpkg install
       run: vcpkg\bootstrap-vcpkg.bat
     - name: vcpkg build
-      run: vcpkg\vcpkg install ginkgo
+      run: vcpkg\vcpkg install ginkgo:x64-windows
     - name: upload fail log
       if: success() || failure()
       uses: actions/upload-artifact@v3.1.1
       with:
         name: logs
-        path: D:\a\vcpkg-test\vcpkg-test\vcpkg\buildtrees\ginkgo\install-x86-windows-dbg-out.log
+        path: D:\a\vcpkg-test\vcpkg-test\vcpkg\buildtrees\ginkgo\install-x64-windows-dbg-out.log
 
